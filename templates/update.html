@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welocme to update page</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="name">name</label>
+        <input type="text" name="s_name" id="" placeholder="name">
+        <br><br>
+        <label for="description">description</label>
+        <input type="text" name="s_description" id="" placeholder="description">
+        <br><br>
+        <label for="category">category</label>
+        <input type="text" name="s_category" id="" placeholder="category">
+        <br><br>
+        <label for="stock_quantity">stock_quantity</label>
+        <input type="number" name="s_stock_quantity" id="" placeholder="stock_quantity">
+        <br><br>
+        <label for="image">image</label>
+        <input type="url" name="s_image" id="" placeholder="image">
+        <br><br>
+        <button type="submit">save</button>
+        
+
+
+
+    </form>
+
+</body>
+</html>

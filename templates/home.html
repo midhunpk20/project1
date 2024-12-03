@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welocome to home page</h1>
+    <a href="{% url 'stock_link' %}">go to stock page</a>
+    <br><br>
+    <table style="border: solid 1px;">
+        <tr style="border: solid 1px;">
+            <th style="border: solid 1px;">name</th>
+            <th style="border: solid 1px;">description</th>
+            <th style="border: solid 1px;">category</th>
+            <th style="border: solid 1px;">stock_quantity</th>
+            <th style="border: solid 1px;">image</th>
+            <th style="border: solid 1px;">view button</th>
+            <th style="border: solid 1px;">update button</th>
+            <th style="border: solid 1px;">delete button</th>
+
+        </tr>
+        
+        {% for i in data %}
+        <tr style="border: solid 1px;">
+            <td style="border: solid 1px;">{{i.name}}</td>
+            <td style="border: solid 1px;">{{i.description}}</td>
+            <td style="border: solid 1px;">{{i.category}}</td>
+            <td style="border: solid 1px;">{{i.stock_quantity}}</td>
+            <td style="border: solid 1px;">{{i.image}}</td>
+            <td style="border: solid 1px;"><a href="{% url 'view_link' i.id %}">click</a></td>
+            <td style="border: solid 1px;"><a href="{% url 'update_link' i.id %}">click</a></td>
+            <td style="border: solid 1px;"><a href="{% url 'delete_link' i.id %}">click</a></td>
+        </tr>
+        {% endfor %}
+
+        
+    </table>
+</body>
+</html>
